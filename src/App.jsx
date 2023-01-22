@@ -5,6 +5,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import Product from "./pages/Product";
+import Header from "./components/Header";
 
 const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjY5N2ZjMjk3ZmNkMDA1ZWU2NzEzOGUiLCJpYXQiOjE2NzQwNjk5ODUsImV4cCI6MTcwNTYwNTk4NX0.C7eB9ZV3M9vm5I2nO5w43Au5Q8UnjeAg6uLhP3O6fjY";
 
@@ -23,10 +24,7 @@ export default () => {
             })
     }, []);
     return <>
-        <header className="container-fluid">
-            <Link to="/">Главная</Link>
-            <Link to="/catalog">Каталог</Link>
-        </header>
+        <Header/>
         <main>
             {/* 
                 Col:
@@ -45,6 +43,10 @@ export default () => {
                 </Routes>
             </Container>
         </main>
-        <footer className="container-fluid">footer</footer>
+        <footer className="container-fluid d-flex align-items-center">
+            <Container>
+                ©2023 React Learning
+            </Container>
+        </footer>
     </>
 }
