@@ -25,7 +25,7 @@ let ads = [
 
 const Home = () => {
     return <>
-        <Row>
+        <Row className="gx-5 gy-4">
             <Col xs={12}>
                 <AdBlock {...ads[0]}/>
             </Col>
